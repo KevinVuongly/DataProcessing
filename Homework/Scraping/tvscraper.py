@@ -30,38 +30,42 @@ def extract_tvseries(dom):
     # NOTE: FOR THIS EXERCISE YOU ARE ALLOWED (BUT NOT REQUIRED) TO IGNORE
     # UNICODE CHARACTERS AND SIMPLY LEAVE THEM OUT OF THE OUTPUT.
 
+    # amount of films is set at 50, is changeable
     info, topfilms = 5, 50
     Matrix = [['-' for x in range(info)] for y in range(topfilms)]
-    actors = []
 
-    print len(Matrix)
-    
+    # go through the amount of films you want to look through
     for y in range(topfilms):
+        # division containing relevant content
         entry = dom.by_tag('div.lister-item-content')[y]
-		
+
+	# film title
         for film in entry.by_tag('h3'):
             title = film.by_tag('a')[0]
             Matrix[y][0] = title.content.encode('utf-8')
-			
+
+	# rating of the film	
         for rating in entry.by_tag('strong'):
             Matrix[y][1] = float(rating.content.encode('utf-8'))
-			
+
+	# genre(s) of the film
         for genre in entry.by_tag('span.genre'):
             category = genre.content[1:-12].encode('utf-8')
             Matrix[y][2] = category
-			
+
+	# the actor(s)
+	actors = []
         for information in entry.by_tag('p'):
             for actor in information.by_tag('a'):
                 actors.append(actor.content.encode('utf-8'))
         actors = ', '.join(actors)
         Matrix[y][3] = actors
-        actors = []
-		
+
+	# runtime of the film
         for runtime in entry.by_tag('span.runtime'):
             Matrix[y][4] = int(runtime.content[:-4].encode('utf-8'))
 
-    return Matrix  # replace this line as well as appropriate
-
+    return Matrix
 
 def save_csv(f, tvseries):
     '''
@@ -70,6 +74,7 @@ def save_csv(f, tvseries):
     writer = csv.writer(f)
     writer.writerow(['Title', 'Rating', 'Genre', 'Actors', 'Runtime'])
 
+    # write down each film with it's own respective row
     for row in range(len(tvseries)):
         writer.writerow(tvseries[row][:])
         

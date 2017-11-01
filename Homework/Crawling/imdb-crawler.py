@@ -210,20 +210,27 @@ def scrape_top_250(url):
         IMDB, note that these URLS must be absolute (i.e. include the http
         part, the domain part and the path part).
     '''
-    movie_urls = []
-    # YOUR SCRAPING CODE GOES HERE, ALL YOU ARE LOOKING FOR ARE THE ABSOLUTE
-    # URLS TO EACH MOVIE'S IMDB PAGE, ADD THOSE TO THE LIST movie_urls.
 
+    # list of movie URls
+    movie_urls = []
+
+    # download html file
     html = url.download()
-    
+
+    # Parse the HTML file into a DOM representation
     dom = DOM(html)
     top250 = 250
-    
+
+    # get hold of URL of each movie's page on IMDB
     for x in range(top250):
         entry = dom.by_tag('td.titleColumn')[x]
         title = entry.by_tag('a')[0]
         title_link = title.attrs['href']
+
+        # complete URL 
         title_link = 'http://www.imdb.com' + title_link
+
+        # add to list of URLs
         movie_urls.append(title_link)
 
     # return the list of URLs of each movie's page on IMDB
@@ -245,7 +252,6 @@ def scrape_movie_page(dom):
         several), actor(s) (semicolon separated if several), rating, number
         of ratings.
     '''
-    # YOUR SCRAPING CODE GOES HERE:
 
     # title
     titlewrapper = dom.by_tag('div.title_wrapper')[0]
@@ -304,9 +310,6 @@ def scrape_movie_page(dom):
     rating_count = dom.by_tag('span.small')[0]
     n_ratings = rating_count.content
 
-    print title, duration, genres, directors, writers, actors, rating, n_ratings
-    print
-    
     # Return everything of interest for this movie (all strings as specified
     # in the docstring of this function).
     return title, duration, genres, directors, writers, actors, rating, \
