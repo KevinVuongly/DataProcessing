@@ -1,7 +1,7 @@
 # Scraping IMDB
 
 ### Name: Kevin Vuong
-### Student number: 1073014
+### Student number: 10730141
 
 ## Info
 - Python 2
