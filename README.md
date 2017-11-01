@@ -1,8 +1,11 @@
 # Scraping IMDB
 
+### Name: Kevin Vuong
+### Student number: 1073014
+
 ## Info
 - Python 2
-- These files demonstrates how to scrape an IMDB site.
+- These files shows how to scrape an IMDB site.
 
 ## Modules needed
 - Pattern
