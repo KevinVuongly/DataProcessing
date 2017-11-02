@@ -7,7 +7,7 @@
 
 ## Info week 0
 - Python 2
-- These files shows how to scrape an IMDB site.
+- These files show how to scrape an IMDB site.
 
 ###### Modules needed
 - Pattern
