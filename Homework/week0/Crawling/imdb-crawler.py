@@ -260,6 +260,8 @@ def scrape_movie_page(dom):
 
     # duration
     title_details = dom.by_id('titleDetails')
+    
+    # try to get hold of runtime if available
     try:
         runtime_inline = title_details.by_tag('time')[0]
         duration = runtime_inline.content[:-4]
@@ -270,36 +272,52 @@ def scrape_movie_page(dom):
     genres = []
     subtext = dom.by_tag('div.subtext')[0]
     itemprop_genre = subtext.by_tag('span.itemprop')
+
+    # get hold of all genres and append it in list
     for x in range(len(itemprop_genre)):
         content = itemprop_genre[x].content
         genres.append(content)
+
+    # make a string of the list
     genres = ', '.join(genres)
 
     # directors
     directors = []
     credit_director = dom.by_tag('div.credit_summary_item')[0]
     itemprop_dir = credit_director.by_tag('span.itemprop')
+
+    
     for x in range(len(itemprop_dir)):
         content = itemprop_dir[x].content
         directors.append(content)
+
+    # make a string of the list
     directors = ', '.join(directors)
 
     # writers
     writers = []
     credit_writer = dom.by_tag('div.credit_summary_item')[1]
     itemprop_writer = credit_writer.by_tag('span.itemprop')
+
+    # get hold of all writers and append it in list
     for x in range(len(itemprop_writer)):
         content = itemprop_writer[x].content
         writers.append(content)
+
+    # make a string of the list
     writers = ', '.join(writers)
 
     # actors
     actors = []
     credit_actor = dom.by_tag('div.credit_summary_item')[2]
     itemprop_actor = credit_actor.by_tag('span.itemprop')
+
+    # get hold of all writers and append it in list
     for x in range(len(itemprop_actor)):
         content = itemprop_actor[x].content
         actors.append(content)
+
+    # make a string of the list
     actors = ', '.join(actors)
 
     # rating
