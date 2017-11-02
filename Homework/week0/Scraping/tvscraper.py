@@ -65,6 +65,7 @@ def extract_tvseries(dom):
         for runtime in entry.by_tag('span.runtime'):
             Matrix[y][4] = int(runtime.content[:-4].encode('utf-8'))
 
+    # return matrix of relevant information of all the scraped films
     return Matrix
 
 def save_csv(f, tvseries):
