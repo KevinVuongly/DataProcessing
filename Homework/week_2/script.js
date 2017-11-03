@@ -1,2 +1,2 @@
-data = document.getElementById('rawdata')
-document.write(data)
+var data = document.getElementById('rawdata').value
+console.log(data)
