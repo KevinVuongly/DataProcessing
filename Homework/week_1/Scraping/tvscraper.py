@@ -54,7 +54,7 @@ def extract_tvseries(dom):
             Matrix[y][2] = category
 
 	# the actor(s)
-	actors = []
+        actors = []
         for information in entry.by_tag('p'):
             for actor in information.by_tag('a'):
                 actors.append(actor.content.encode('utf-8'))
