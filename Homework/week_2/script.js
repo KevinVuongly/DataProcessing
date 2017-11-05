@@ -12,9 +12,9 @@ date, temperature = splitElement(date, temperature, rawdata);
 date = removeSpaces(date);
 temperature = removeSpaces(temperature);
 
-year = 366;
+days = 366;
 info = 2;
-data = createMatrix(year, info);
+data = createMatrix(days, info);
 
 for (var i = 0; i < data.length; i++){
   data[i][0] = date[i];
