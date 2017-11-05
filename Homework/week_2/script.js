@@ -20,21 +20,40 @@ for (var i = 0; i < data.length; i++){
   data[i][0] = date[i];
   data[i][0] = data[i][0].slice(0, 4) + "/" + data[i][0].slice(4, 6) +
                 "/" + data[i][0].slice(6, 8);
-  data[i][0] = new Date(data[i][0])
+  data[i][0] = new Date(data[i][0]);
 
-  data[i][1] = temperature[i];
+  data[i][1] = Number(temperature[i]);
 }
 
-var domain_temp = [Math.min.apply(0, temperature),
-                   Math.max.apply(0, temperature)];
-var range_temp = [0, 365];
+var domain_temp = [0, 365];
+var range_temp = [Math.min.apply(0, temperature),
+                  Math.max.apply(0, temperature)];
+
+var canvas = document.getElementById('myCanvas');
+canvas.width  = days;
+canvas.height = range_temp[1] - range_temp[0];
+
+var ctx = canvas.getContext('2d');
+
+position = createTransform(domain_temp, range_temp);
+
+var y_start = data[0][1] + Math.abs(range_temp[0]);
+
+ctx.lineJoin = 'round';
+ctx.beginPath();
+ctx.moveTo(0, y_start);
+for (var i = 1; i < data.length; i++){
+  var y = data[i][1] + Math.abs(range_temp[0]);
+  ctx.lineTo(i, y);
+}
+ctx.stroke();
 
 //////////////////////////////////////////////////////
 
 function createMatrix(rows, columns){
   var matrix = [];
 
-  for(var i=0; i<rows; i++) {
+  for(var i=0; i < rows; i++) {
     matrix[i] = new Array(columns);
   }
 
