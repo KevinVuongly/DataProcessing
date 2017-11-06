@@ -25,25 +25,25 @@ for (var i = 0; i < data.length; i++){
   data[i][1] = Number(temperature[i]);
 }
 
-var domain_temp = [0, 365];
-var range_temp = [Math.min.apply(0, temperature),
+var domainTemp = [0, 365];
+var rangeTemp = [Math.min.apply(0, temperature),
                   Math.max.apply(0, temperature)];
 
 var canvas = document.getElementById('myCanvas');
 canvas.width  = days;
-canvas.height = range_temp[1] - range_temp[0];
+canvas.height = rangeTemp[1] - rangeTemp[0];
 
 var ctx = canvas.getContext('2d');
 
-position = createTransform(domain_temp, range_temp);
+position = createTransform(domainTemp, rangeTemp);
 
-var y_start = data[0][1] + Math.abs(range_temp[0]);
+var yStart = canvas.height - (data[0][1] + Math.abs(rangeTemp[0]));
 
 ctx.lineJoin = 'round';
 ctx.beginPath();
-ctx.moveTo(0, y_start);
+ctx.moveTo(0, yStart);
 for (var i = 1; i < data.length; i++){
-  var y = data[i][1] + Math.abs(range_temp[0]);
+  var y = canvas.height - (data[i][1] + Math.abs(rangeTemp[0]));
   ctx.lineTo(i, y);
 }
 ctx.stroke();
