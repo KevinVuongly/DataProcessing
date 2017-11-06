@@ -12,9 +12,9 @@ date, temperature = splitElement(date, temperature, rawdata);
 date = removeSpaces(date);
 temperature = removeSpaces(temperature);
 
-days = 366;
-info = 2;
-data = createMatrix(days, info);
+var days = 366;
+var info = 2;
+var data = createMatrix(days, info);
 
 for (var i = 0; i < data.length; i++){
   data[i][0] = date[i];
@@ -29,22 +29,84 @@ var rangeTemp = [0, 400];
 var domainTemp = [Math.min.apply(0, temperature),
                   Math.max.apply(0, temperature)];
 
+
 var canvas = document.getElementById('myCanvas');
-canvas.width = 2 * days;
-canvas.height = rangeTemp[1] - rangeTemp[0];
+
+var padding = 160;
+var plotwidth = 2 * days;
+var plotheight = rangeTemp[1] - rangeTemp[0];
+
+canvas.width = plotwidth + padding;
+canvas.height = plotheight + 2 * padding;
 
 var ctx = canvas.getContext('2d');
 
-position = createTransform(domainTemp, rangeTemp);
+var position = createTransform(domainTemp, rangeTemp);
 
+// initialize title of graph
+ctx.font = '36px serif';
+ctx.textAlign = 'center';
+ctx.fillText('Average temperature in De Bilt(NL)',
+              canvas.width / 2, 50);
+
+// draw y-axis
+drawLine(padding / 2, padding / 2,
+         position(300) + padding, position(-50) + padding);
+
+for (var i = 0; i < 8; i++){
+  var yAxisPositionX = padding / 2;
+  var yAxisPositionY = position(-50 + 50 * i) + padding;
+  if (-50 + 50 * i != 0){
+    drawLine(yAxisPositionX, yAxisPositionX + 10,
+             yAxisPositionY, yAxisPositionY);
+  }
+  ctx.font = '12px serif';
+  ctx.textAlign = 'left';
+  ctx.fillText(-50 + 50 * i, padding / 2 - 20, yAxisPositionY);
+}
+
+// VERTICALE TITEL VOOR Y-AS, GAAT FOUT, VRAAG ASSISTENT OM HULP
+ctx.save();
+ctx.rotate(90 * Math.PI / 180);
+ctx.font = '22px serif';
+ctx.textAlign = 'center';
+ctx.fillText('Temperature in 10 * Celsius', 500, 400);
+ctx.restore()
+
+// draw x-axis
+drawLine(padding / 2, canvas.width - padding / 2,
+         position(0) + padding, position(0) + padding);
+
+var months = [];
+for (var i = 0, amountOfMonths = 12; i < amountOfMonths; i++){
+  months.push(date[30 * i]);
+}
+
+for (var i = 0, amountOfMonths = 12; i <= amountOfMonths; i++){
+  var xAxisPositionX = padding / 2 + (plotwidth / amountOfMonths) * i;
+  var xAxisPositionY = position(0) + padding;
+  if ( i > 0){
+    drawLine(xAxisPositionX, xAxisPositionX,
+             xAxisPositionY, xAxisPositionY - 10);
+  }
+
+  if (i < amountOfMonths){
+    ctx.font = '12px serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(months[i], xAxisPositionX + (plotwidth / amountOfMonths) / 2,
+                 xAxisPositionY + 10);
+  }
+}
+
+// drawing the data in graph
 var yStart = position(data[0][1]);
 
 ctx.lineJoin = 'round';
 ctx.beginPath();
-ctx.moveTo(0, yStart);
+ctx.moveTo(padding / 2, yStart + padding);
 for (var i = 1; i < data.length; i++){
   var y = position(data[i][1]);
-  ctx.lineTo(2 * i, y);
+  ctx.lineTo(padding / 2 + 2 * i, y + padding);
 }
 ctx.stroke();
 
@@ -78,6 +140,13 @@ function removeSpaces(array){
   }
 
   return array;
+}
+
+function drawLine(xOld, xNew, yOld, yNew){
+  ctx.beginPath();
+  ctx.moveTo(xOld, yOld);
+  ctx.lineTo(xNew, yNew);
+  ctx.stroke();
 }
 
 function createTransform(domain, range){
