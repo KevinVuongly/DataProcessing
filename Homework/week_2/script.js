@@ -49,6 +49,11 @@ ctx.textAlign = 'center';
 ctx.fillText('Average temperature in De Bilt(NL)',
               canvas.width / 2, 50);
 
+ctx.font = '24px serif';
+ctx.textAlign = 'center';
+ctx.fillText('november 9th 2014 - november 9th 2015',
+              canvas.width / 2, 80 );
+
 // draw y-axis
 drawLine(padding / 2, padding / 2,
          position(300) + padding, position(-50) + padding);
