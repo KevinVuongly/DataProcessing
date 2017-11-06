@@ -25,26 +25,26 @@ for (var i = 0; i < data.length; i++){
   data[i][1] = Number(temperature[i]);
 }
 
-var domainTemp = [0, 365];
-var rangeTemp = [Math.min.apply(0, temperature),
+var rangeTemp = [0, 400];
+var domainTemp = [Math.min.apply(0, temperature),
                   Math.max.apply(0, temperature)];
 
 var canvas = document.getElementById('myCanvas');
-canvas.width  = days;
+canvas.width = 2 * days;
 canvas.height = rangeTemp[1] - rangeTemp[0];
 
 var ctx = canvas.getContext('2d');
 
 position = createTransform(domainTemp, rangeTemp);
 
-var yStart = canvas.height - (data[0][1] + Math.abs(rangeTemp[0]));
+var yStart = position(data[0][1]);
 
 ctx.lineJoin = 'round';
 ctx.beginPath();
 ctx.moveTo(0, yStart);
 for (var i = 1; i < data.length; i++){
-  var y = canvas.height - (data[i][1] + Math.abs(rangeTemp[0]));
-  ctx.lineTo(i, y);
+  var y = position(data[i][1]);
+  ctx.lineTo(2 * i, y);
 }
 ctx.stroke();
 
@@ -99,6 +99,6 @@ function createTransform(domain, range){
 
     // returns the function for the linear transformation (y= a * x + b)
     return function(x){
-      return alpha * x + beta;
+      return range_max - (alpha * x + beta);
     }
 }
