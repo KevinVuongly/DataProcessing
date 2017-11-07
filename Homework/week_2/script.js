@@ -67,25 +67,26 @@ for (var i = 0; i < 8; i++){
   }
   ctx.font = '12px serif';
   ctx.textAlign = 'left';
-  ctx.fillText(-50 + 50 * i, padding / 2 - 20, yAxisPositionY);
+  ctx.fillText(-5 + 5 * i, padding / 2 - 20, yAxisPositionY);
 }
 
-// VERTICALE TITEL VOOR Y-AS, GAAT FOUT, VRAAG ASSISTENT OM HULP
 ctx.save();
-ctx.rotate(90 * Math.PI / 180);
+ctx.translate(padding / 4, canvas.height / 2);
+ctx.rotate(270 * Math.PI / 180);
 ctx.font = '22px serif';
 ctx.textAlign = 'center';
-ctx.fillText('Temperature in 10 * Celsius', 500, 400);
+var degree = 176;
+ctx.fillText('Temperature in Celsius (' +
+              String.fromCharCode(degree) + 'C)', 0, 0);
 ctx.restore()
 
 // draw x-axis
 drawLine(padding / 2, canvas.width - padding / 2,
          position(0) + padding, position(0) + padding);
 
-var months = [];
-for (var i = 0, amountOfMonths = 12; i < amountOfMonths; i++){
-  months.push(date[30 * i]);
-}
+var months = ['9th nov', '9th dec', '9th jan', '9th feb', '9th mar',
+              '9th apr', '9th may', '9th jun', '9th jul','9th aug',
+              '9th sept', '9th oct', '9th nov'];
 
 for (var i = 0, amountOfMonths = 12; i <= amountOfMonths; i++){
   var xAxisPositionX = padding / 2 + (plotwidth / amountOfMonths) * i;
@@ -95,13 +96,33 @@ for (var i = 0, amountOfMonths = 12; i <= amountOfMonths; i++){
              xAxisPositionY, xAxisPositionY - 10);
   }
 
-  if (i < amountOfMonths){
-    ctx.font = '12px serif';
-    ctx.textAlign = 'center';
-    ctx.fillText(months[i], xAxisPositionX + (plotwidth / amountOfMonths) / 2,
-                 xAxisPositionY + 10);
-  }
+  ctx.save();
+  ctx.translate(xAxisPositionX, xAxisPositionY + 30);
+  ctx.rotate(45 * Math.PI / 180);
+  ctx.font = '12px serif';
+  ctx.textAlign = 'center';
+  ctx.fillText(months[i], 0, 0);
+  ctx.restore();
 }
+
+var yearswitch = 53;
+
+drawLine(padding / 2 + 2 * yearswitch, padding / 2 + 2 * yearswitch,
+         position(0) + padding, position(-50) + padding);
+
+ctx.save();
+ctx.font = '30px serif';
+ctx.textAlign = 'center';
+ctx.fillText('2014', padding / 2 + yearswitch, position(-50) + padding);
+ctx.restore()
+
+ctx.save();
+ctx.font = '30px serif';
+ctx.textAlign = 'center';
+ctx.fillText('2015', (plotwidth / amountOfMonths) * 2 + 2 * yearswitch,
+              position(-50) + padding);
+ctx.restore()
+
 
 // drawing the data in graph
 var yStart = position(data[0][1]);
