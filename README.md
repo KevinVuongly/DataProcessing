@@ -16,6 +16,14 @@
 ###### Modules needed
 - Pattern
 
+## Info week 2
+- JavaScript, CSS, HTML
+- script.js plots a graph of the average temperature in De Bilt, by visualizing it in a HTML page.
+
+###### Extra information
+- data is from http://projects.knmi.nl/klimatologie/daggegevens/selectie.cgi
+- XMLHttpRequest is used to retrieve the data from the downloaded csv file
+- data is from november 9th 2014 to november 9th 2015 in days
 
 
 
