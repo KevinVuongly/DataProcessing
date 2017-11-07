@@ -18,7 +18,7 @@
 
 ## Info week 2
 - JavaScript, CSS, HTML
-- script.js plots a graph of the average temperature in De Bilt, by visualizing it in a HTML page.
+- script.js plots a graph of the average temperature in De Bilt. Plot is visualized in index.html.
 
 ###### Extra information
 - data is from http://projects.knmi.nl/klimatologie/daggegevens/selectie.cgi
