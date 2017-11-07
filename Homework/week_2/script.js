@@ -1,6 +1,6 @@
 var xhr = new XMLHttpRequest();
 
-xhr.open('GET', 'KNMI.txt', true);
+xhr.open('GET', 'KNMI.csv', true);
 xhr.send();
 
 xhr.onreadystatechange = function(){
