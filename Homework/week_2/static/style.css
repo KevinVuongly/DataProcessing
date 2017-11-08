@@ -14,3 +14,7 @@ body {
   /* This centers our sketch vertically. */
   align-items: center;
 }
+
+#myCanvas {
+  border-style: solid;
+}

@@ -81,6 +81,11 @@ xhr.onreadystatechange = function(){
       if (-50 + 50 * i != 0){
         drawLine(ctx, yAxisPositionX, yAxisPositionX + 10,
                  yAxisPositionY, yAxisPositionY);
+        ctx.save()
+        ctx.lineWidth=0.09;
+        drawLine(ctx, yAxisPositionX, canvas.width - padding / 2,
+                 yAxisPositionY, yAxisPositionY);
+        ctx.restore();
       }
       ctx.font = '12px serif';
       ctx.textAlign = 'left';
@@ -148,7 +153,8 @@ xhr.onreadystatechange = function(){
     ctx.moveTo(padding / 2, yStart + padding);
     for (var i = 1; i < data.length; i++){
       var y = position(data[i][1]);
-      ctx.lineTo(padding / 2 + 2 * i, y + padding);
+      ctx.lineTo(padding / 2 + plotWidth / data.length * i,
+                 y + padding);
     }
     ctx.stroke();
   }
