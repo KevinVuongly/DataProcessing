@@ -1,17 +1,24 @@
+// Name: Kevin Vuong
+// Student number: 10730141
+
 var xhr = new XMLHttpRequest();
 
 xhr.open('GET', 'https://kevinvuongly.github.io/DataProcessing/Homework/week_2/data/KNMI.csv', true);
 xhr.send();
 
 xhr.onreadystatechange = function(){
+  // if retrieving the data goes correctly
   if (xhr.readyState == 4 && xhr.status == 200){
+    // get hold of the data
     var rawdata = xhr.responseText;
 
+    // put the rawdata in the html file
     document.getElementById('rawdata').innerHTML = rawdata;
 
     var dataStruct = document.getElementById('rawdata');
     var rawdata = dataStruct.value;
 
+    // hide the data
     if (dataStruct.style.display == 'none'){
       dataStruct.style.display = 'block';
     }
@@ -19,6 +26,7 @@ xhr.onreadystatechange = function(){
       dataStruct.style.display = 'none';
     }
 
+    // constructing data in lists
     rawdata = rawdata.split("\n");
     rawdata.splice(rawdata.length-1, 1);
 
@@ -34,6 +42,7 @@ xhr.onreadystatechange = function(){
     var info = 2;
     var data = createMatrix(days, info);
 
+    // put relevant data in a matrix
     for (var i = 0; i < date.length; i++){
       data[i][0] = date[i];
       data[i][0] = data[i][0].slice(0, 4) + '/' + data[i][0].slice(4, 6) +
@@ -43,21 +52,29 @@ xhr.onreadystatechange = function(){
       data[i][1] = Number(temperature[i]);
     }
 
+    // constructing range of screen and data respectively
     var rangeTemp = [0, 400];
     var domainTemp = [Math.min.apply(0, temperature),
                       Math.max.apply(0, temperature)];
 
+    // get hold of the canvas
     var canvas = document.getElementById('myCanvas');
 
+    // add padding to the canvas
     var padding = 160;
+
+    // this is the width and height of the plot
     var plotWidth = 2 * days;
     var plotHeight = rangeTemp[1] - rangeTemp[0];
 
+    // plotsize plus padding
     canvas.width = plotWidth + padding;
     canvas.height = plotHeight + 2 * padding;
 
+    // object representing two-dimensional rendering context
     var ctx = canvas.getContext('2d');
 
+    // calculate y-position of data for the plot
     var position = createTransform(domainTemp, rangeTemp);
 
     // initialize title of graph
@@ -92,6 +109,7 @@ xhr.onreadystatechange = function(){
       ctx.fillText(-5 + 5 * i, padding / 2 - 20, yAxisPositionY);
     }
 
+    // y-axis information
     ctx.save();
     ctx.translate(padding / 4, canvas.height / 2);
     ctx.rotate(270 * Math.PI / 180);
@@ -127,17 +145,21 @@ xhr.onreadystatechange = function(){
       ctx.restore();
     }
 
+    // day 53 is when it's 2015
     var yearSwitch = 53;
 
+    // draw line to split graph in 2014 and 2015
     drawLine(ctx, padding / 2 + 2 * yearSwitch, padding / 2 + 2 * yearSwitch,
              position(0) + padding, position(-50) + padding);
 
+    // add 2014 text
     ctx.save();
     ctx.font = '30px serif';
     ctx.textAlign = 'center';
     ctx.fillText('2014', padding / 2 + yearSwitch, position(-50) + padding);
     ctx.restore()
 
+    // add 2015 text
     ctx.save();
     ctx.font = '30px serif';
     ctx.textAlign = 'center';
@@ -158,6 +180,7 @@ xhr.onreadystatechange = function(){
     }
     ctx.stroke();
   }
+  // if getting hold of the data file fails
   else if (xhr.readyState == 4 && xhr.status >= 404){
      alert('Couldn\'t find the file.');
   }
@@ -165,6 +188,7 @@ xhr.onreadystatechange = function(){
 
 /////////////////////////////////////////////////////////
 
+// initialize a matrix
 function createMatrix(rows, columns){
   var matrix = [];
 
@@ -175,6 +199,7 @@ function createMatrix(rows, columns){
   return matrix;
 }
 
+// splits a string in two element when it sees an ','
 function splitElement(part1, part2, data){
   for (var i = 0; i < data.length; i++){
     var split = data[i].split(',');
@@ -185,6 +210,7 @@ function splitElement(part1, part2, data){
   return part1, part2;
 }
 
+// removes blank space in every string element in a list
 function removeSpaces(array){
 
   for (var i = 0; i < array.length; i++)
@@ -195,6 +221,7 @@ function removeSpaces(array){
   return array;
 }
 
+// draws a line
 function drawLine(context, xOld, xNew, yOld, yNew){
   context.beginPath();
   context.moveTo(xOld, yOld);
@@ -202,6 +229,7 @@ function drawLine(context, xOld, xNew, yOld, yNew){
   context.stroke();
 }
 
+// calculates y-position in the plot for the data
 function createTransform(domain, range){
 	// domain is a two-element array of the data bounds [domainMin, domainMax]
 	// range is a two-element array of the screen bounds [rangeMin, rangeMax]

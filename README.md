@@ -17,7 +17,7 @@
 - Pattern
 
 ## Info week 2
-- https://kevinvuongly.github.io/DataProcessing/index_week_2.html
+- https://kevinvuongly.github.io/DataProcessing/Homework/week_2/index_week_2.html
 - JavaScript, CSS, HTML
 - script.js plots a graph of the average temperature in De Bilt. Plot is visualized in index.html.
 
