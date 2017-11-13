@@ -1,0 +1,1466 @@
+[
+    {
+        "date": "20141109",
+        "temperature": "95"
+    },
+    {
+        "date": "20141110",
+        "temperature": "96"
+    },
+    {
+        "date": "20141111",
+        "temperature": "95"
+    },
+    {
+        "date": "20141112",
+        "temperature": "93"
+    },
+    {
+        "date": "20141113",
+        "temperature": "79"
+    },
+    {
+        "date": "20141114",
+        "temperature": "103"
+    },
+    {
+        "date": "20141115",
+        "temperature": "97"
+    },
+    {
+        "date": "20141116",
+        "temperature": "84"
+    },
+    {
+        "date": "20141117",
+        "temperature": "95"
+    },
+    {
+        "date": "20141118",
+        "temperature": "79"
+    },
+    {
+        "date": "20141119",
+        "temperature": "80"
+    },
+    {
+        "date": "20141120",
+        "temperature": "71"
+    },
+    {
+        "date": "20141121",
+        "temperature": "52"
+    },
+    {
+        "date": "20141122",
+        "temperature": "83"
+    },
+    {
+        "date": "20141123",
+        "temperature": "106"
+    },
+    {
+        "date": "20141124",
+        "temperature": "65"
+    },
+    {
+        "date": "20141125",
+        "temperature": "41"
+    },
+    {
+        "date": "20141126",
+        "temperature": "49"
+    },
+    {
+        "date": "20141127",
+        "temperature": "74"
+    },
+    {
+        "date": "20141128",
+        "temperature": "63"
+    },
+    {
+        "date": "20141129",
+        "temperature": "28"
+    },
+    {
+        "date": "20141130",
+        "temperature": "25"
+    },
+    {
+        "date": "20141201",
+        "temperature": "15"
+    },
+    {
+        "date": "20141202",
+        "temperature": "6"
+    },
+    {
+        "date": "20141203",
+        "temperature": "-12"
+    },
+    {
+        "date": "20141204",
+        "temperature": "-3"
+    },
+    {
+        "date": "20141205",
+        "temperature": "35"
+    },
+    {
+        "date": "20141206",
+        "temperature": "32"
+    },
+    {
+        "date": "20141207",
+        "temperature": "34"
+    },
+    {
+        "date": "20141208",
+        "temperature": "32"
+    },
+    {
+        "date": "20141209",
+        "temperature": "22"
+    },
+    {
+        "date": "20141210",
+        "temperature": "65"
+    },
+    {
+        "date": "20141211",
+        "temperature": "65"
+    },
+    {
+        "date": "20141212",
+        "temperature": "75"
+    },
+    {
+        "date": "20141213",
+        "temperature": "47"
+    },
+    {
+        "date": "20141214",
+        "temperature": "25"
+    },
+    {
+        "date": "20141215",
+        "temperature": "56"
+    },
+    {
+        "date": "20141216",
+        "temperature": "52"
+    },
+    {
+        "date": "20141217",
+        "temperature": "80"
+    },
+    {
+        "date": "20141218",
+        "temperature": "115"
+    },
+    {
+        "date": "20141219",
+        "temperature": "94"
+    },
+    {
+        "date": "20141220",
+        "temperature": "77"
+    },
+    {
+        "date": "20141221",
+        "temperature": "78"
+    },
+    {
+        "date": "20141222",
+        "temperature": "114"
+    },
+    {
+        "date": "20141223",
+        "temperature": "111"
+    },
+    {
+        "date": "20141224",
+        "temperature": "81"
+    },
+    {
+        "date": "20141225",
+        "temperature": "52"
+    },
+    {
+        "date": "20141226",
+        "temperature": "19"
+    },
+    {
+        "date": "20141227",
+        "temperature": "7"
+    },
+    {
+        "date": "20141228",
+        "temperature": "-9"
+    },
+    {
+        "date": "20141229",
+        "temperature": "35"
+    },
+    {
+        "date": "20141230",
+        "temperature": "50"
+    },
+    {
+        "date": "20141231",
+        "temperature": "52"
+    },
+    {
+        "date": "20150101",
+        "temperature": "30"
+    },
+    {
+        "date": "20150102",
+        "temperature": "73"
+    },
+    {
+        "date": "20150103",
+        "temperature": "38"
+    },
+    {
+        "date": "20150104",
+        "temperature": "39"
+    },
+    {
+        "date": "20150105",
+        "temperature": "24"
+    },
+    {
+        "date": "20150106",
+        "temperature": "28"
+    },
+    {
+        "date": "20150107",
+        "temperature": "45"
+    },
+    {
+        "date": "20150108",
+        "temperature": "65"
+    },
+    {
+        "date": "20150109",
+        "temperature": "99"
+    },
+    {
+        "date": "20150110",
+        "temperature": "95"
+    },
+    {
+        "date": "20150111",
+        "temperature": "64"
+    },
+    {
+        "date": "20150112",
+        "temperature": "84"
+    },
+    {
+        "date": "20150113",
+        "temperature": "86"
+    },
+    {
+        "date": "20150114",
+        "temperature": "44"
+    },
+    {
+        "date": "20150115",
+        "temperature": "79"
+    },
+    {
+        "date": "20150116",
+        "temperature": "55"
+    },
+    {
+        "date": "20150117",
+        "temperature": "30"
+    },
+    {
+        "date": "20150118",
+        "temperature": "22"
+    },
+    {
+        "date": "20150119",
+        "temperature": "10"
+    },
+    {
+        "date": "20150120",
+        "temperature": "8"
+    },
+    {
+        "date": "20150121",
+        "temperature": "-5"
+    },
+    {
+        "date": "20150122",
+        "temperature": "-12"
+    },
+    {
+        "date": "20150123",
+        "temperature": "-28"
+    },
+    {
+        "date": "20150124",
+        "temperature": "22"
+    },
+    {
+        "date": "20150125",
+        "temperature": "37"
+    },
+    {
+        "date": "20150126",
+        "temperature": "59"
+    },
+    {
+        "date": "20150127",
+        "temperature": "51"
+    },
+    {
+        "date": "20150128",
+        "temperature": "53"
+    },
+    {
+        "date": "20150129",
+        "temperature": "24"
+    },
+    {
+        "date": "20150130",
+        "temperature": "17"
+    },
+    {
+        "date": "20150131",
+        "temperature": "10"
+    },
+    {
+        "date": "20150201",
+        "temperature": "26"
+    },
+    {
+        "date": "20150202",
+        "temperature": "20"
+    },
+    {
+        "date": "20150203",
+        "temperature": "17"
+    },
+    {
+        "date": "20150204",
+        "temperature": "2"
+    },
+    {
+        "date": "20150205",
+        "temperature": "-7"
+    },
+    {
+        "date": "20150206",
+        "temperature": "-2"
+    },
+    {
+        "date": "20150207",
+        "temperature": "15"
+    },
+    {
+        "date": "20150208",
+        "temperature": "50"
+    },
+    {
+        "date": "20150209",
+        "temperature": "57"
+    },
+    {
+        "date": "20150210",
+        "temperature": "57"
+    },
+    {
+        "date": "20150211",
+        "temperature": "42"
+    },
+    {
+        "date": "20150212",
+        "temperature": "26"
+    },
+    {
+        "date": "20150213",
+        "temperature": "46"
+    },
+    {
+        "date": "20150214",
+        "temperature": "66"
+    },
+    {
+        "date": "20150215",
+        "temperature": "26"
+    },
+    {
+        "date": "20150216",
+        "temperature": "9"
+    },
+    {
+        "date": "20150217",
+        "temperature": "33"
+    },
+    {
+        "date": "20150218",
+        "temperature": "18"
+    },
+    {
+        "date": "20150219",
+        "temperature": "35"
+    },
+    {
+        "date": "20150220",
+        "temperature": "53"
+    },
+    {
+        "date": "20150221",
+        "temperature": "32"
+    },
+    {
+        "date": "20150222",
+        "temperature": "32"
+    },
+    {
+        "date": "20150223",
+        "temperature": "59"
+    },
+    {
+        "date": "20150224",
+        "temperature": "54"
+    },
+    {
+        "date": "20150225",
+        "temperature": "48"
+    },
+    {
+        "date": "20150226",
+        "temperature": "63"
+    },
+    {
+        "date": "20150227",
+        "temperature": "49"
+    },
+    {
+        "date": "20150228",
+        "temperature": "51"
+    },
+    {
+        "date": "20150301",
+        "temperature": "83"
+    },
+    {
+        "date": "20150302",
+        "temperature": "53"
+    },
+    {
+        "date": "20150303",
+        "temperature": "44"
+    },
+    {
+        "date": "20150304",
+        "temperature": "51"
+    },
+    {
+        "date": "20150305",
+        "temperature": "57"
+    },
+    {
+        "date": "20150306",
+        "temperature": "66"
+    },
+    {
+        "date": "20150307",
+        "temperature": "84"
+    },
+    {
+        "date": "20150308",
+        "temperature": "93"
+    },
+    {
+        "date": "20150309",
+        "temperature": "88"
+    },
+    {
+        "date": "20150310",
+        "temperature": "76"
+    },
+    {
+        "date": "20150311",
+        "temperature": "27"
+    },
+    {
+        "date": "20150312",
+        "temperature": "54"
+    },
+    {
+        "date": "20150313",
+        "temperature": "46"
+    },
+    {
+        "date": "20150314",
+        "temperature": "34"
+    },
+    {
+        "date": "20150315",
+        "temperature": "56"
+    },
+    {
+        "date": "20150316",
+        "temperature": "63"
+    },
+    {
+        "date": "20150317",
+        "temperature": "76"
+    },
+    {
+        "date": "20150318",
+        "temperature": "56"
+    },
+    {
+        "date": "20150319",
+        "temperature": "68"
+    },
+    {
+        "date": "20150320",
+        "temperature": "49"
+    },
+    {
+        "date": "20150321",
+        "temperature": "64"
+    },
+    {
+        "date": "20150322",
+        "temperature": "43"
+    },
+    {
+        "date": "20150323",
+        "temperature": "31"
+    },
+    {
+        "date": "20150324",
+        "temperature": "57"
+    },
+    {
+        "date": "20150325",
+        "temperature": "59"
+    },
+    {
+        "date": "20150326",
+        "temperature": "50"
+    },
+    {
+        "date": "20150327",
+        "temperature": "57"
+    },
+    {
+        "date": "20150328",
+        "temperature": "69"
+    },
+    {
+        "date": "20150329",
+        "temperature": "93"
+    },
+    {
+        "date": "20150330",
+        "temperature": "72"
+    },
+    {
+        "date": "20150331",
+        "temperature": "90"
+    },
+    {
+        "date": "20150401",
+        "temperature": "65"
+    },
+    {
+        "date": "20150402",
+        "temperature": "63"
+    },
+    {
+        "date": "20150403",
+        "temperature": "70"
+    },
+    {
+        "date": "20150404",
+        "temperature": "54"
+    },
+    {
+        "date": "20150405",
+        "temperature": "53"
+    },
+    {
+        "date": "20150406",
+        "temperature": "69"
+    },
+    {
+        "date": "20150407",
+        "temperature": "71"
+    },
+    {
+        "date": "20150408",
+        "temperature": "86"
+    },
+    {
+        "date": "20150409",
+        "temperature": "104"
+    },
+    {
+        "date": "20150410",
+        "temperature": "113"
+    },
+    {
+        "date": "20150411",
+        "temperature": "90"
+    },
+    {
+        "date": "20150412",
+        "temperature": "100"
+    },
+    {
+        "date": "20150413",
+        "temperature": "84"
+    },
+    {
+        "date": "20150414",
+        "temperature": "119"
+    },
+    {
+        "date": "20150415",
+        "temperature": "138"
+    },
+    {
+        "date": "20150416",
+        "temperature": "99"
+    },
+    {
+        "date": "20150417",
+        "temperature": "85"
+    },
+    {
+        "date": "20150418",
+        "temperature": "90"
+    },
+    {
+        "date": "20150419",
+        "temperature": "78"
+    },
+    {
+        "date": "20150420",
+        "temperature": "109"
+    },
+    {
+        "date": "20150421",
+        "temperature": "100"
+    },
+    {
+        "date": "20150422",
+        "temperature": "85"
+    },
+    {
+        "date": "20150423",
+        "temperature": "94"
+    },
+    {
+        "date": "20150424",
+        "temperature": "124"
+    },
+    {
+        "date": "20150425",
+        "temperature": "121"
+    },
+    {
+        "date": "20150426",
+        "temperature": "106"
+    },
+    {
+        "date": "20150427",
+        "temperature": "80"
+    },
+    {
+        "date": "20150428",
+        "temperature": "60"
+    },
+    {
+        "date": "20150429",
+        "temperature": "89"
+    },
+    {
+        "date": "20150430",
+        "temperature": "98"
+    },
+    {
+        "date": "20150501",
+        "temperature": "87"
+    },
+    {
+        "date": "20150502",
+        "temperature": "97"
+    },
+    {
+        "date": "20150503",
+        "temperature": "130"
+    },
+    {
+        "date": "20150504",
+        "temperature": "154"
+    },
+    {
+        "date": "20150505",
+        "temperature": "154"
+    },
+    {
+        "date": "20150506",
+        "temperature": "122"
+    },
+    {
+        "date": "20150507",
+        "temperature": "118"
+    },
+    {
+        "date": "20150508",
+        "temperature": "142"
+    },
+    {
+        "date": "20150509",
+        "temperature": "133"
+    },
+    {
+        "date": "20150510",
+        "temperature": "128"
+    },
+    {
+        "date": "20150511",
+        "temperature": "176"
+    },
+    {
+        "date": "20150512",
+        "temperature": "146"
+    },
+    {
+        "date": "20150513",
+        "temperature": "127"
+    },
+    {
+        "date": "20150514",
+        "temperature": "112"
+    },
+    {
+        "date": "20150515",
+        "temperature": "94"
+    },
+    {
+        "date": "20150516",
+        "temperature": "105"
+    },
+    {
+        "date": "20150517",
+        "temperature": "119"
+    },
+    {
+        "date": "20150518",
+        "temperature": "111"
+    },
+    {
+        "date": "20150519",
+        "temperature": "100"
+    },
+    {
+        "date": "20150520",
+        "temperature": "105"
+    },
+    {
+        "date": "20150521",
+        "temperature": "119"
+    },
+    {
+        "date": "20150522",
+        "temperature": "149"
+    },
+    {
+        "date": "20150523",
+        "temperature": "124"
+    },
+    {
+        "date": "20150524",
+        "temperature": "126"
+    },
+    {
+        "date": "20150525",
+        "temperature": "124"
+    },
+    {
+        "date": "20150526",
+        "temperature": "118"
+    },
+    {
+        "date": "20150527",
+        "temperature": "135"
+    },
+    {
+        "date": "20150528",
+        "temperature": "129"
+    },
+    {
+        "date": "20150529",
+        "temperature": "111"
+    },
+    {
+        "date": "20150530",
+        "temperature": "112"
+    },
+    {
+        "date": "20150531",
+        "temperature": "126"
+    },
+    {
+        "date": "20150601",
+        "temperature": "127"
+    },
+    {
+        "date": "20150602",
+        "temperature": "148"
+    },
+    {
+        "date": "20150603",
+        "temperature": "138"
+    },
+    {
+        "date": "20150604",
+        "temperature": "156"
+    },
+    {
+        "date": "20150605",
+        "temperature": "214"
+    },
+    {
+        "date": "20150606",
+        "temperature": "156"
+    },
+    {
+        "date": "20150607",
+        "temperature": "139"
+    },
+    {
+        "date": "20150608",
+        "temperature": "125"
+    },
+    {
+        "date": "20150609",
+        "temperature": "116"
+    },
+    {
+        "date": "20150610",
+        "temperature": "154"
+    },
+    {
+        "date": "20150611",
+        "temperature": "179"
+    },
+    {
+        "date": "20150612",
+        "temperature": "216"
+    },
+    {
+        "date": "20150613",
+        "temperature": "175"
+    },
+    {
+        "date": "20150614",
+        "temperature": "153"
+    },
+    {
+        "date": "20150615",
+        "temperature": "133"
+    },
+    {
+        "date": "20150616",
+        "temperature": "114"
+    },
+    {
+        "date": "20150617",
+        "temperature": "160"
+    },
+    {
+        "date": "20150618",
+        "temperature": "143"
+    },
+    {
+        "date": "20150619",
+        "temperature": "127"
+    },
+    {
+        "date": "20150620",
+        "temperature": "130"
+    },
+    {
+        "date": "20150621",
+        "temperature": "144"
+    },
+    {
+        "date": "20150622",
+        "temperature": "127"
+    },
+    {
+        "date": "20150623",
+        "temperature": "126"
+    },
+    {
+        "date": "20150624",
+        "temperature": "158"
+    },
+    {
+        "date": "20150625",
+        "temperature": "182"
+    },
+    {
+        "date": "20150626",
+        "temperature": "205"
+    },
+    {
+        "date": "20150627",
+        "temperature": "176"
+    },
+    {
+        "date": "20150628",
+        "temperature": "173"
+    },
+    {
+        "date": "20150629",
+        "temperature": "180"
+    },
+    {
+        "date": "20150630",
+        "temperature": "206"
+    },
+    {
+        "date": "20150701",
+        "temperature": "260"
+    },
+    {
+        "date": "20150702",
+        "temperature": "254"
+    },
+    {
+        "date": "20150703",
+        "temperature": "241"
+    },
+    {
+        "date": "20150704",
+        "temperature": "256"
+    },
+    {
+        "date": "20150705",
+        "temperature": "202"
+    },
+    {
+        "date": "20150706",
+        "temperature": "187"
+    },
+    {
+        "date": "20150707",
+        "temperature": "198"
+    },
+    {
+        "date": "20150708",
+        "temperature": "159"
+    },
+    {
+        "date": "20150709",
+        "temperature": "135"
+    },
+    {
+        "date": "20150710",
+        "temperature": "165"
+    },
+    {
+        "date": "20150711",
+        "temperature": "204"
+    },
+    {
+        "date": "20150712",
+        "temperature": "177"
+    },
+    {
+        "date": "20150713",
+        "temperature": "174"
+    },
+    {
+        "date": "20150714",
+        "temperature": "179"
+    },
+    {
+        "date": "20150715",
+        "temperature": "179"
+    },
+    {
+        "date": "20150716",
+        "temperature": "196"
+    },
+    {
+        "date": "20150717",
+        "temperature": "217"
+    },
+    {
+        "date": "20150718",
+        "temperature": "182"
+    },
+    {
+        "date": "20150719",
+        "temperature": "162"
+    },
+    {
+        "date": "20150720",
+        "temperature": "178"
+    },
+    {
+        "date": "20150721",
+        "temperature": "210"
+    },
+    {
+        "date": "20150722",
+        "temperature": "195"
+    },
+    {
+        "date": "20150723",
+        "temperature": "178"
+    },
+    {
+        "date": "20150724",
+        "temperature": "184"
+    },
+    {
+        "date": "20150725",
+        "temperature": "149"
+    },
+    {
+        "date": "20150726",
+        "temperature": "148"
+    },
+    {
+        "date": "20150727",
+        "temperature": "166"
+    },
+    {
+        "date": "20150728",
+        "temperature": "152"
+    },
+    {
+        "date": "20150729",
+        "temperature": "141"
+    },
+    {
+        "date": "20150730",
+        "temperature": "138"
+    },
+    {
+        "date": "20150731",
+        "temperature": "133"
+    },
+    {
+        "date": "20150801",
+        "temperature": "151"
+    },
+    {
+        "date": "20150802",
+        "temperature": "177"
+    },
+    {
+        "date": "20150803",
+        "temperature": "215"
+    },
+    {
+        "date": "20150804",
+        "temperature": "180"
+    },
+    {
+        "date": "20150805",
+        "temperature": "189"
+    },
+    {
+        "date": "20150806",
+        "temperature": "205"
+    },
+    {
+        "date": "20150807",
+        "temperature": "206"
+    },
+    {
+        "date": "20150808",
+        "temperature": "187"
+    },
+    {
+        "date": "20150809",
+        "temperature": "186"
+    },
+    {
+        "date": "20150810",
+        "temperature": "198"
+    },
+    {
+        "date": "20150811",
+        "temperature": "200"
+    },
+    {
+        "date": "20150812",
+        "temperature": "195"
+    },
+    {
+        "date": "20150813",
+        "temperature": "217"
+    },
+    {
+        "date": "20150814",
+        "temperature": "209"
+    },
+    {
+        "date": "20150815",
+        "temperature": "184"
+    },
+    {
+        "date": "20150816",
+        "temperature": "150"
+    },
+    {
+        "date": "20150817",
+        "temperature": "143"
+    },
+    {
+        "date": "20150818",
+        "temperature": "146"
+    },
+    {
+        "date": "20150819",
+        "temperature": "165"
+    },
+    {
+        "date": "20150820",
+        "temperature": "179"
+    },
+    {
+        "date": "20150821",
+        "temperature": "197"
+    },
+    {
+        "date": "20150822",
+        "temperature": "207"
+    },
+    {
+        "date": "20150823",
+        "temperature": "197"
+    },
+    {
+        "date": "20150824",
+        "temperature": "179"
+    },
+    {
+        "date": "20150825",
+        "temperature": "167"
+    },
+    {
+        "date": "20150826",
+        "temperature": "202"
+    },
+    {
+        "date": "20150827",
+        "temperature": "157"
+    },
+    {
+        "date": "20150828",
+        "temperature": "154"
+    },
+    {
+        "date": "20150829",
+        "temperature": "170"
+    },
+    {
+        "date": "20150830",
+        "temperature": "200"
+    },
+    {
+        "date": "20150831",
+        "temperature": "209"
+    },
+    {
+        "date": "20150901",
+        "temperature": "161"
+    },
+    {
+        "date": "20150902",
+        "temperature": "132"
+    },
+    {
+        "date": "20150903",
+        "temperature": "122"
+    },
+    {
+        "date": "20150904",
+        "temperature": "135"
+    },
+    {
+        "date": "20150905",
+        "temperature": "132"
+    },
+    {
+        "date": "20150906",
+        "temperature": "131"
+    },
+    {
+        "date": "20150907",
+        "temperature": "142"
+    },
+    {
+        "date": "20150908",
+        "temperature": "139"
+    },
+    {
+        "date": "20150909",
+        "temperature": "131"
+    },
+    {
+        "date": "20150910",
+        "temperature": "143"
+    },
+    {
+        "date": "20150911",
+        "temperature": "143"
+    },
+    {
+        "date": "20150912",
+        "temperature": "157"
+    },
+    {
+        "date": "20150913",
+        "temperature": "166"
+    },
+    {
+        "date": "20150914",
+        "temperature": "145"
+    },
+    {
+        "date": "20150915",
+        "temperature": "125"
+    },
+    {
+        "date": "20150916",
+        "temperature": "154"
+    },
+    {
+        "date": "20150917",
+        "temperature": "144"
+    },
+    {
+        "date": "20150918",
+        "temperature": "139"
+    },
+    {
+        "date": "20150919",
+        "temperature": "134"
+    },
+    {
+        "date": "20150920",
+        "temperature": "135"
+    },
+    {
+        "date": "20150921",
+        "temperature": "146"
+    },
+    {
+        "date": "20150922",
+        "temperature": "131"
+    },
+    {
+        "date": "20150923",
+        "temperature": "132"
+    },
+    {
+        "date": "20150924",
+        "temperature": "126"
+    },
+    {
+        "date": "20150925",
+        "temperature": "116"
+    },
+    {
+        "date": "20150926",
+        "temperature": "104"
+    },
+    {
+        "date": "20150927",
+        "temperature": "110"
+    },
+    {
+        "date": "20150928",
+        "temperature": "105"
+    },
+    {
+        "date": "20150929",
+        "temperature": "117"
+    },
+    {
+        "date": "20150930",
+        "temperature": "123"
+    },
+    {
+        "date": "20151001",
+        "temperature": "106"
+    },
+    {
+        "date": "20151002",
+        "temperature": "103"
+    },
+    {
+        "date": "20151003",
+        "temperature": "103"
+    },
+    {
+        "date": "20151004",
+        "temperature": "103"
+    },
+    {
+        "date": "20151005",
+        "temperature": "131"
+    },
+    {
+        "date": "20151006",
+        "temperature": "153"
+    },
+    {
+        "date": "20151007",
+        "temperature": "149"
+    },
+    {
+        "date": "20151008",
+        "temperature": "124"
+    },
+    {
+        "date": "20151009",
+        "temperature": "102"
+    },
+    {
+        "date": "20151010",
+        "temperature": "109"
+    },
+    {
+        "date": "20151011",
+        "temperature": "65"
+    },
+    {
+        "date": "20151012",
+        "temperature": "48"
+    },
+    {
+        "date": "20151013",
+        "temperature": "38"
+    },
+    {
+        "date": "20151014",
+        "temperature": "51"
+    },
+    {
+        "date": "20151015",
+        "temperature": "63"
+    },
+    {
+        "date": "20151016",
+        "temperature": "77"
+    },
+    {
+        "date": "20151017",
+        "temperature": "81"
+    },
+    {
+        "date": "20151018",
+        "temperature": "84"
+    },
+    {
+        "date": "20151019",
+        "temperature": "105"
+    },
+    {
+        "date": "20151020",
+        "temperature": "95"
+    },
+    {
+        "date": "20151021",
+        "temperature": "97"
+    },
+    {
+        "date": "20151022",
+        "temperature": "119"
+    },
+    {
+        "date": "20151023",
+        "temperature": "114"
+    },
+    {
+        "date": "20151024",
+        "temperature": "118"
+    },
+    {
+        "date": "20151025",
+        "temperature": "99"
+    },
+    {
+        "date": "20151026",
+        "temperature": "105"
+    },
+    {
+        "date": "20151027",
+        "temperature": "111"
+    },
+    {
+        "date": "20151028",
+        "temperature": "106"
+    },
+    {
+        "date": "20151029",
+        "temperature": "107"
+    },
+    {
+        "date": "20151030",
+        "temperature": "102"
+    },
+    {
+        "date": "20151031",
+        "temperature": "98"
+    },
+    {
+        "date": "20151101",
+        "temperature": "77"
+    },
+    {
+        "date": "20151102",
+        "temperature": "69"
+    },
+    {
+        "date": "20151103",
+        "temperature": "90"
+    },
+    {
+        "date": "20151104",
+        "temperature": "122"
+    },
+    {
+        "date": "20151105",
+        "temperature": "133"
+    },
+    {
+        "date": "20151106",
+        "temperature": "155"
+    },
+    {
+        "date": "20151107",
+        "temperature": "164"
+    },
+    {
+        "date": "20151108",
+        "temperature": "131"
+    },
+    {
+        "date": "20151109",
+        "temperature": "136"
+    }
+]
