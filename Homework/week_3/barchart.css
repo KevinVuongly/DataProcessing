@@ -1,0 +1,13 @@
+.chart rect {
+  fill: steelblue;
+}
+
+.chart rect:hover {
+  fill: green;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
