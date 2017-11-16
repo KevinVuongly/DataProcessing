@@ -33,18 +33,6 @@ var chart = d3.select('.chart')
               .attr('transform', 'translate(' + margin.left
                                               + ',' + margin.top + ')');
 
-// construct tooltip
-var tooltip = chart.append('g')
-  .attr('class', 'tooltip')
-  .style('display', 'none');
-
-// add atributes to tooltip
-tooltip.append('text')
-  .attr('x', 15)
-  .attr('dy', '1.2em')
-  .style('fontsize', '1.25em')
-  .attr('font-weight', 'bold');
-
 // add x-axis
 var xAxis = d3.svg.axis().scale(x).orient('bottom');
 
@@ -80,15 +68,31 @@ d3.json('data/KNMI.json', function(error, data) {
         .attr('x', function(d) { return x(d.date); })
         .attr('y', function(d) { return y(d.temperature / 10); })
         .attr('width', barWidth - 5)
-        .attr('height', function(d) { return height - y(d.temperature / 10); });
-        .on('mouseover', tooltip.style('display', null))
-        .on('mouseout', tooltip.style('display', 'none'))
+        .attr('height', function(d) { return height - y(d.temperature / 10); })
+        .on('mouseover', function() {
+            tooltip.style('display', null)
+        })
+        .on('mouseout', function() {
+            tooltip.style('display', 'none')
+        })
         .on('mousemove', function(d) {
             var xPos = d3.mouse(this)[0] - 15;
             var yPos = d3.mouse(this)[1] - 55;
             tooltip.attr('transform', 'translate(' + xPos + ',' + yPos + ')');
-            tooltip.select('text').text('Temperature:' + ': ' + d.temperature / 10);
+            tooltip.select('text').text('Temperature: ' + d.temperature / 10);
         });
+
+    // construct tooltip
+    var tooltip = chart.append('g')
+        .attr('class', 'tooltip')
+        .style('display', 'none');
+
+    // add atributes to tooltip
+    tooltip.append('text')
+        .attr('x', 15)
+        .attr('dy', '1.2em')
+        .style('fontsize', '1.25em')
+        .attr('font-weight', 'bold');
 });
 
 // URL-source of data

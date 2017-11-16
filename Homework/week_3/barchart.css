@@ -1,32 +1,38 @@
 /* Name: Kevin Vuong
  * Student number: 10730141
  */
- 
+
+/* bars are colored steelblue */
 .chart rect {
-  fill: steelblue;
+    fill: steelblue;
 }
 
+/* when hovering over a bar, color turns green */
 .chart rect:hover {
-  fill: green;
+    fill: green;
 }
 
+/* font of chart text */
 .chart text {
-  fill: black;
-  font: 10px sans-serif;
-  text-anchor: middle;
+    fill: black;
+    font: 14px sans-serif;
+    text-anchor: middle;
 }
 
+/* font of the axis texts */
 .axis text {
-  font: 10px sans-serif;
+    font: 10px sans-serif;
 }
 
+/* axis path and lines */
 .axis path,
 .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
 }
 
+/* make bg-color blue if hovering over URL-link */
 sup:hover {
-  background-color: blue;
+    background-color: blue;
 }
