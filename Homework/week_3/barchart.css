@@ -22,3 +22,7 @@
   stroke: #000;
   shape-rendering: crispEdges;
 }
+
+sup:hover {
+  background-color: blue;
+}
