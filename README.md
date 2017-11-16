@@ -1,7 +1,5 @@
 # DataProcessing
 
-#### https://github.com/KevinVuongly/DataProcessing
-
 ### Name: Kevin Vuong
 ### Student number: 10730141
 
@@ -26,5 +24,7 @@
 - XMLHttpRequest is used to retrieve the data from the downloaded csv file
 - data is from november 9th 2014 to november 9th 2015 in days
 
-
-
+## Info week 3
+- https://kevinvuongly.github.io/DataProcessing/Homework/week_3/barchart.html
+- JavaScript with D3, CSS, HTML
+- barchart.js plots a barchart of the average temperature in the Bilt. Plot is visualized in barchart.html.
