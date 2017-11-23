@@ -2,6 +2,7 @@
  *  Student number: 10730141
  */
 
+// wait until DOM content is loaded
 document.addEventListener("DOMContentLoaded", function() {
     // width and height of barchart
     var margin = {top: 20, right: 30, bottom: 30, left: 50},
