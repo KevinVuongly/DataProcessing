@@ -1,3 +1,7 @@
+/*  Name: Kevin Vuong
+ *  Student number: 10730141
+ */
+
 html, body {
   height: 100%;
 }
@@ -12,8 +16,19 @@ body {
 
     /* This centers our sketch vertically. */
     align-items: center;
+    display: inline-block;
 }
 
+sup {
+    font: 20px arial;
+    display: block;
+    width: 150px;
+}
+
+sup:hover {
+    background-color: blue;
+    cursor: pointer;
+}
 
 .axis path,
 .axis line {

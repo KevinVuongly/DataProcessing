@@ -1,5 +1,5 @@
-/* Name: Kevin Vuong
- * Student number: 10730141
+/*  Name: Kevin Vuong
+ *  Student number: 10730141
  */
 
 // width and height of barchart
@@ -22,6 +22,7 @@ var xAxis = d3.svg.axis().scale(x).orient("bottom");
 // add y-axis
 var yAxis = d3.svg.axis().scale(y).orient("left");
 
+// add svg element
 var svg = d3.select("body").append("div")
     .attr("class", "scatterplot")
     .append("svg")
@@ -47,6 +48,7 @@ d3.csv("data.csv", function(error, data) {
     y.domain(d3.extent(data, function(d)
              { return d.GrossDomesticProduct; })).nice();
 
+    // add x-axis
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
@@ -58,6 +60,7 @@ d3.csv("data.csv", function(error, data) {
         .style("text-anchor", "end")
         .text("Population in millions");
 
+    // add y-axis
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis)
@@ -69,6 +72,7 @@ d3.csv("data.csv", function(error, data) {
         .style("text-anchor", "end")
         .text("GDP in US dollars/capita");
 
+    // draw scatterplot
     svg.selectAll(".dot")
         .data(data)
         .enter().append("circle")
@@ -103,6 +107,7 @@ d3.csv("data.csv", function(error, data) {
         .style('fontsize', '1.25em')
         .attr('font-weight', 'bold');
 
+    // construct legend
     var legend = svg.selectAll(".legend")
          .data(color.domain())
          .enter().append("g")
@@ -110,12 +115,14 @@ d3.csv("data.csv", function(error, data) {
          .attr("transform", function(d, i)
          { return "translate(0," + i * 20 + ")"; });
 
+    // create rectangles for the colors of the legend
     legend.append("rect")
          .attr("x", width - 18)
          .attr("width", 18)
          .attr("height", 18)
          .style("fill", color);
 
+    // add text to the legend
     legend.append("text")
          .attr("x", width - 24)
          .attr("y", 9)
@@ -123,6 +130,7 @@ d3.csv("data.csv", function(error, data) {
          .style("text-anchor", "end")
          .text(function(d) { return d; });
 
+    // add title to the scatterplot
     svg.append("text")
          .attr("x", (width / 2))
          .attr("y", 0 - (margin.top / 2) + 10)
@@ -130,3 +138,18 @@ d3.csv("data.csv", function(error, data) {
          .style("font-size", "24px")
          .text("GDP per capita compared to population");
 });
+
+// URL-source of data
+d3.select("body").append("div")
+    .attr("class", "data")
+    .append("sup")
+    .text("Population data")
+    .on("click", function(){
+        window.open('https://data.oecd.org/pop/population.htm');
+})
+
+d3.select(".data").append("sup")
+    .text("GDP data")
+    .on("click", function(){
+        window.open('https://data.oecd.org/gdp/gross-domestic-product-gdp.htm');
+})
