@@ -30,3 +30,7 @@ https://kevinvuongly.github.io/DataProcessing/
 - https://kevinvuongly.github.io/DataProcessing/Homework/week_3/barchart.html
 - JavaScript with D3, CSS, HTML
 - barchart.js plots a barchart of the average temperature in the Bilt. Plot is visualized in barchart.html.
+
+## Info week 4
+- https://data.oecd.org/pop/population.htm
+- https://data.oecd.org/gdp/gross-domestic-product-gdp.htm
