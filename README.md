@@ -32,6 +32,6 @@ https://kevinvuongly.github.io/DataProcessing/
 - barchart.js plots a barchart of the average temperature in the Bilt. Plot is visualized in barchart.html.
 
 ## Info week 4
-- https://kevinvuongly.github.io/DataProcessing/Homework/week_3/scatterplot.html
+- https://kevinvuongly.github.io/DataProcessing/Homework/week_4/scatterplot.html
 - JavaScript with D3, CSS, HTML
 - scatterplot.js plots a scatterplot of the GDP in US dollars/capita per country compared to it's population.
