@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			var str;
 			if(city == "Hoorn") {
-				str = "data/data_hoorn.csv";
+				str = "https://kevinvuongly.github.io/DataProcessing/Homework/week_5/data/data_hoorn.csv";
 			}
 			else {
-				str = "data/data_debilt.csv";
+				str = "https://kevinvuongly.github.io/DataProcessing/Homework/week_5/data/data_debilt.csv";
 			}
 
         d3.csv(str, type, function(error, data) {
