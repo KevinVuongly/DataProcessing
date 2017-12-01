@@ -1,12 +1,19 @@
+/*  Name: Kevin Vuong
+ *  Student number: 10730141
+ */
+
+/* align the header on the middle of the page */
 h1 {
     text-align: center;
 }
 
+/* markup each line, with a width of 2px and no filling*/
 .line {
     fill: none;
     stroke-width: 2px;
 }
 
+/* markup for the crosshair lines */
 line {
   fill: none;
   stroke-dasharray: 5;
@@ -14,6 +21,7 @@ line {
   stroke: gray;
 }
 
+/* markup for the tooltip */
 .tooltip {
     position: absolute;
     text-align: center;
@@ -25,6 +33,7 @@ line {
     pointer-events: none;
 }
 
+/* markup plot title */
 #plottitle {
     color: #ffffff;
     font-family: 'Helvetica Neue', sans-serif;
@@ -35,6 +44,7 @@ line {
     text-anchor: middle;
 }
 
+/* markup for data footer */
 .data {
     font: 20px arial;
     display: block;
@@ -42,7 +52,8 @@ line {
     text-align: center;
 }
 
+/* markup for data footer when mouse hovering above it */
 sup:hover {
-    background-color: cyan;
+    background-color: blue;
     cursor: pointer;
 }
