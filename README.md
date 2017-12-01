@@ -37,6 +37,6 @@ https://kevinvuongly.github.io/DataProcessing/
 - scatterplot.js plots a scatterplot of the GDP in US dollars/capita per country compared to it's population.
 
 ## Info week 5
-- https://kevinvuongly.github.io/DataProcessing/Homework/week_4/scatterplot.html
+- https://kevinvuongly.github.io/DataProcessing/Homework/week_5/line.html
 - JavaScript with D3, CSS, HTML
 - lineplot.js plots a multiline graph of the minimum, average and maximum temperature of a certain Dutch city in january 2016.
