@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 id: id,
                 values: data.map(function(d) {
                     return {datetext: d.datetext,
-                        date: d.date, temperature: d[id] / 10};
-                });
+                        date: d.date, temperature: d[id] / 10}
+                })
               };
             });
 
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 verticalLine.attr("x1", mousex).attr("x2", mousex)
                     .attr("opacity", 1);
                 horizontalLine.attr("y1", mousey).attr("y2", mousey)
-                    .attr("opacity", 1)
+                    .attr("opacity", 1);
             }).on("mouseout", function(){
                 verticalLine.attr("opacity", 0.1);
                 horizontalLine.attr("opacity", 0.1);
