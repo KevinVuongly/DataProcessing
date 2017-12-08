@@ -19,6 +19,14 @@ body {
     display: inline-block;
 }
 
+.scatterplot {
+    float: left;
+}
+
+.barplot {
+    float: left;
+}
+
 /* markup for the tooltip */
 .tooltip {
     position: absolute;

@@ -30,6 +30,14 @@ document.addEventListener("DOMContentLoaded", function() {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    var barplotsvg = d3.select("body").append("div")
+        .attr("class", "barplot")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
     queue()
     	.defer(d3.csv, "data/GDP.csv")
         .defer(d3.csv, "data/happy.csv")
@@ -93,32 +101,35 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr("cx", function(d) { return x(d.Population); })
             .attr("cy", function(d) { return y(d.GrossDomesticProduct); })
             .attr("fill", "green")
-            .on('mouseover', function() {
-                tooltip.style('display', null)
+            .on("mouseover", function() {
+                tooltip.style("display", null)
             })
-            .on('mouseout', function() {
-                tooltip.style('display', 'none')
+            .on("mouseout", function() {
+                tooltip.style("display", "none")
             })
-            .on('mousemove', function(d) {
+            .on("mousemove", function(d) {
                 var xPos = d3.mouse(this)[0] - 15;
                 var yPos = d3.mouse(this)[1] - 15;
-                tooltip.attr('transform', 'translate(' + xPos + ',' + yPos + ')');
-                tooltip.select('text').text(d.Country +
+                tooltip.attr("transform", "translate(" + xPos + "," + yPos + ")");
+                tooltip.select("text").text(d.Country +
                      ", " + "Total GDP is $" + parseInt(d.Total));
+            })
+            .data(happy)
+            .on("click", function(d) {
+
             });
-            .on("")
 
         // construct tooltip
-        var tooltip = svg.append('g')
-            .attr('class', 'tooltip')
-            .style('display', 'none');
+        var tooltip = svg.append("g")
+            .attr("class", "tooltip")
+            .style("display", "none");
 
         // add atributes to tooltip
-        tooltip.append('text')
-            .attr('x', 15)
-            .attr('dy', '1.2em')
-            .style('fontsize', '1.25em')
-            .attr('font-weight', 'bold');
+        tooltip.append("text")
+            .attr("x", 15)
+            .attr("dy", "1.2em")
+            .style("fontsize", "1.25em")
+            .attr("font-weight", "bold");
 
         // add title to the scatterplot
         svg.append("text")
