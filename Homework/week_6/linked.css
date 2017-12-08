@@ -1,0 +1,55 @@
+/*  Name: Kevin Vuong
+ *  Student number: 10730141
+ */
+
+html, body {
+  height: 100%;
+}
+
+body {
+    font: 10px sans-serif;
+    margin: 0;
+    display: flex;
+
+    /* This centers our sketch horizontally. */
+    justify-content: center;
+
+    /* This centers our sketch vertically. */
+    align-items: center;
+    display: inline-block;
+}
+
+/* markup for the tooltip */
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 55px;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    pointer-events: none;
+}
+
+
+sup {
+    font: 20px arial;
+    display: block;
+    width: 150px;
+}
+
+sup:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.dot {
+    stroke: #000;
+}

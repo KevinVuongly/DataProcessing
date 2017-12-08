@@ -75,6 +75,8 @@ def save_csv(f, tvseries):
     writer = csv.writer(f)
     writer.writerow(['Title', 'Rating', 'Genre', 'Actors', 'Runtime'])
 
+    print(tvseries)
+
     # write down each film with it's own respective row
     for row in range(len(tvseries)):
         writer.writerow(tvseries[row][:])
