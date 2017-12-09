@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr("class", function(d, i) { return "rectangle" + i; })
             .attr("fill", function(d, i) { return zBar(i); })
             .attr('x', function(d) { return xBar(d) + 15; })
-            .attr('y', 0)
+            .attr('y', yBar(0))
             .attr('width', width / indexes.length - 30)
             .attr('height',0);
 
