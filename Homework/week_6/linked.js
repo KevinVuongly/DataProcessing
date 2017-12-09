@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .on("click", function(){
             window.open('https://data.oecd.org/gdp/gross-domestic-product-gdp.htm');
     });
-    
+
     // width and height of barchart
     var margin = {top: 50, right: 200, bottom: 30, left: 50},
         width = 600 - margin.left - margin.right,
@@ -190,7 +190,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 var yPos = d3.mouse(this)[1] - 15;
                 tooltip.attr("transform", "translate(" + xPos + "," + yPos + ")");
                 tooltip.select("text").text(d.Country +
-                     ", " + "Total GDP is $" + parseInt(d.Total));
+                     ", " + "Total GDP is $" + parseInt(d.Total).toLocaleString()
+                     + ".000.000");
             })
             .on("click", function(d) {
                 var element = d3.select(this);
@@ -204,13 +205,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     .transition()
                     .text(d.Country);
 
-                    var box = d3.select(".rectangle0")
+                var box = d3.select(".rectangle0")
                     .data(happy)
                     .enter()
 
-                for (var i = 0; i < happy.length; i++){
-
-                }
             });
 
         // construct tooltip
