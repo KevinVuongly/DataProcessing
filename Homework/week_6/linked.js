@@ -4,6 +4,23 @@
 
 // wait until DOM content is loaded
 document.addEventListener("DOMContentLoaded", function() {
+
+    // URL-source of data
+    d3.select("body").append("div")
+        .attr("class", "data")
+
+    d3.select(".data").append("sup")
+        .text("Population data")
+        .on("click", function(){
+            window.open('https://data.oecd.org/pop/population.htm');
+    });
+
+    d3.select(".data").append("sup")
+        .text("GDP data")
+        .on("click", function(){
+            window.open('https://data.oecd.org/gdp/gross-domestic-product-gdp.htm');
+    });
+    
     // width and height of barchart
     var margin = {top: 50, right: 200, bottom: 30, left: 50},
         width = 600 - margin.left - margin.right,
@@ -192,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     .enter()
 
                 for (var i = 0; i < happy.length; i++){
-                    
+
                 }
             });
 
@@ -218,18 +235,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     };
 
-    // URL-source of data
-    d3.select("body").append("div")
-        .attr("class", "data")
-        .append("sup")
-        .text("Population data")
-        .on("click", function(){
-            window.open('https://data.oecd.org/pop/population.htm');
-    });
 
-    d3.select(".data").append("sup")
-        .text("GDP data")
-        .on("click", function(){
-            window.open('https://data.oecd.org/gdp/gross-domestic-product-gdp.htm');
-    });
 });
