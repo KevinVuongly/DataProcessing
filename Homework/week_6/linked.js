@@ -176,6 +176,11 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr('width', width / indexes.length - 30)
             .attr('height',0);
 
+        // construct tooltip
+        var tooltip = d3.select("body").append("div")
+          .attr("class", "tooltip")
+          .style("opacity", 0);
+
         // draw scatterplot
         svg.selectAll(".dot")
             .data(GDP)
@@ -185,21 +190,24 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr("cx", function(d) { return x(d.Population); })
             .attr("cy", function(d) { return y(d.GrossDomesticProduct); })
             .attr("fill", "green")
-            .on("mouseover", function() {
+            .on("mouseover", function(d) {
                 d3.select(this).attr("fill", "red");
-                tooltip.style("display", null)
+                d3.select(this).moveToFront();
+                tooltip.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                tooltip.html(d.Country + "<br></br>"
+                             + "Total GDP is: $"
+                             + parseInt(d.Total).toLocaleString()
+                             + ".000.000")
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY - 28) + "px");
             })
             .on("mouseout", function() {
                 d3.select(this).attr("fill", "green");
-                tooltip.style("display", "none")
-            })
-            .on("mousemove", function(d) {
-                var xPos = d3.mouse(this)[0] - 15;
-                var yPos = d3.mouse(this)[1] - 15;
-                tooltip.attr("transform", "translate(" + xPos + "," + yPos + ")");
-                tooltip.select("text").text(d.Country +
-                     ", " + "Total GDP is $" + parseInt(d.Total).toLocaleString()
-                     + ".000.000");
+                tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
             })
             .on("click", function(d) {
                 var element = d3.select(this);
@@ -255,28 +263,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 }
             });
-
-        // construct tooltip
-        var tooltip = svg.append("g")
-            .attr("class", "tooltip")
-            .style("display", "none");
-
-        // add atributes to tooltip
-        tooltip.append("text")
-            .attr("x", 15)
-            .attr("dy", "1.2em")
-            .style("fontsize", "1.25em")
-            .attr("font-weight", "bold");
-
-        // add title to the scatterplot
-        svg.append("text")
-             .attr("x", (width / 2))
-             .attr("y", 0 - (margin.top / 2) + 10)
-             .attr("text-anchor", "middle")
-             .style("font-size", "24px")
-             .text("GDP per capita compared to population");
-
     }
-
-
 })
+
+d3.selection.prototype.moveToFront = function() {
+  return this.each(function(){
+    this.parentNode.appendChild(this);
+  });
+};
