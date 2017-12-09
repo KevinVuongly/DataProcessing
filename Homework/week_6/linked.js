@@ -210,8 +210,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     .style("opacity", 0);
             })
             .on("click", function(d) {
-                var element = d3.select(this);
-                element.attr("fill", "blue");
+                d3.select(this).attr("fill", "blue");
 
                 var updatesvg = d3.select(".barplot")
 
