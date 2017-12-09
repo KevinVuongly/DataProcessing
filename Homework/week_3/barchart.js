@@ -60,6 +60,8 @@ d3.json('data/KNMI.json', function(error, data) {
         .attr('class', 'axis axis-y')
         .call(yAxis);
 
+    console.log(happy);
+
     // add each bar
     chart.selectAll('.bar')
         .data(data)
