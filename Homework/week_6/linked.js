@@ -7,18 +7,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // URL-source of data
     d3.select("body").append("div")
-        .attr("class", "data")
+        .attr("class", "data");
 
     d3.select(".data").append("sup")
         .text("Population data")
         .on("click", function(){
-            window.open('https://data.oecd.org/pop/population.htm');
+            window.open("https://data.oecd.org/pop/population.htm");
     });
 
     d3.select(".data").append("sup")
         .text("GDP data")
         .on("click", function(){
-            window.open('https://data.oecd.org/gdp/gross-domestic-product-gdp.htm');
+            window.open("https://data.oecd.org/gdp/gross-domestic-product-gdp.htm");
+    });
+
+    d3.select(".data").append("sup")
+        .text("Quality of Life index data")
+        .on("click", function(){
+            window.open("https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2017-mid&region=150");
     });
 
     // width and height of barchart
@@ -154,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // title of barplot, empty at first
         barplotsvg.append("text")
             .attr("class", "barchartTitle")
-            .attr("x", (width / 2))
+            .attr("x", (width / 2) + margin.left)
             .attr("y", 20 - (margin.top / 2))
             .attr("text-anchor", "middle")
             .style("font-size", "50px")
@@ -270,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function() {
              .style("font-size", "24px")
              .text("GDP per capita compared to population");
 
-    };
+    }
 
 
-});
+})
