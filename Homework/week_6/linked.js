@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var xBar = d3.scale.ordinal().rangeRoundBands([0, width + 100], .1);
     var yBar = d3.scale.linear().rangeRound([height, 0]);
+    var zBar = d3.scale.category10();
 
     // add x-axis
     var xAxisBar = d3.svg.axis().scale(xBar).orient("bottom");
@@ -123,8 +124,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // BARPLOT
         var indexes = ["Quality of Life", "Purchasing power",
                      "Safety", "Healthcare", "Cost of Living"]
-        xBar.domain(indexes);
-        yBar.domain([0, 150]);
+        xBar.domain(indexes.map(function(d) { return d; }));
+        yBar.domain([0, 200]);
 
         // add x-axis to barchart
         barplotsvg.append("g")
@@ -154,19 +155,20 @@ document.addEventListener("DOMContentLoaded", function() {
         barplotsvg.append("text")
             .attr("class", "barchartTitle")
             .attr("x", (width / 2))
-            .attr("y", 0 - (margin.top / 2) + 10)
+            .attr("y", 20 - (margin.top / 2))
             .attr("text-anchor", "middle")
-            .style("font-size", "24px")
+            .style("font-size", "50px")
             .text("Click on a country");
 
         barplotsvg.selectAll(".bar")
             .data(indexes)
             .enter().append("rect")
             .attr("class", function(d, i) { return "rectangle" + i; })
-            .attr('x', 0)
+            .attr("fill", function(d, i) { return zBar(i); })
+            .attr('x', function(d) { return xBar(d) + 15; })
             .attr('y', 0)
-            .attr('width', 0)
-            .attr('height', 0);
+            .attr('width', width / indexes.length - 30)
+            .attr('height',0);
 
         // draw scatterplot
         svg.selectAll(".dot")
@@ -200,15 +202,52 @@ document.addEventListener("DOMContentLoaded", function() {
                 var updatesvg = d3.select(".barplot")
 
                 updatesvg.transition()
-                    .duration(500)
                     .select(".barchartTitle")
-                    .transition()
                     .text(d.Country);
 
-                var box = d3.select(".rectangle0")
-                    .data(happy)
-                    .enter()
+                var currentCountry = d.Country;
 
+                for (var i = 0; i < happy.length; i++){
+                    if (happy[i].Country.localeCompare(currentCountry) == 0){
+
+                        d3.select(".rectangle0")
+                            .data(happy)
+                            .transition()
+                            .duration(1000)
+                            .attr('y', yBar(happy[i].Quality))
+                            .attr('height',  height - yBar(happy[i].Quality));
+
+                        d3.select(".rectangle1")
+                            .data(happy)
+                            .transition()
+                            .duration(1000)
+                            .attr('y', yBar(happy[i].Purchasing))
+                            .attr('height',  height - yBar(happy[i].Purchasing));
+
+                        d3.select(".rectangle2")
+                            .data(happy)
+                            .transition()
+                            .duration(1000)
+                            .attr('y', yBar(happy[i].Safety))
+                            .attr('height',  height - yBar(happy[i].Safety));
+
+                        d3.select(".rectangle3")
+                            .data(happy)
+                            .transition()
+                            .duration(1000)
+                            .attr('y', yBar(happy[i].Health))
+                            .attr('height',  height - yBar(happy[i].Health));
+
+                        d3.select(".rectangle4")
+                            .data(happy)
+                            .transition()
+                            .duration(1000)
+                            .attr('y', yBar(happy[i].Livingcost))
+                            .attr('height',  height - yBar(happy[i].Livingcost));
+
+                        return;
+                    }
+                }
             });
 
         // construct tooltip
