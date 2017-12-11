@@ -5,27 +5,9 @@
 // wait until DOM content is loaded
 document.addEventListener("DOMContentLoaded", function() {
 
-    // URL-source of data
-    d3.select("body").append("div")
-        .attr("class", "data");
-
-    d3.select(".data").append("sup")
-        .text("Population data")
-        .on("click", function(){
-            window.open("https://data.oecd.org/pop/population.htm");
-    });
-
-    d3.select(".data").append("sup")
-        .text("GDP data")
-        .on("click", function(){
-            window.open("https://data.oecd.org/gdp/gross-domestic-product-gdp.htm");
-    });
-
-    d3.select(".data").append("sup")
-        .text("Quality of Life index data")
-        .on("click", function(){
-            window.open("https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2017-mid&region=150");
-    });
+    d3.select("body")
+        .append("div").attr("class", "container-fluid")
+        .append("div").attr("class", "row")
 
     // width and height of barchart
     var margin = {top: 50, right: 200, bottom: 30, left: 50},
@@ -45,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var yAxis = d3.svg.axis().scale(y).orient("left");
 
     // add svg element
-    var svg = d3.select("body").append("div")
+    var svg = d3.select(".row").append("div")
         .attr("class", "scatterplot")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -63,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // add y-axis
     var yAxisBar = d3.svg.axis().scale(yBar).orient("left");
 
-    var barplotsvg = d3.select("body").append("div")
+    var barplotsvg = d3.select(".row").append("div")
         .attr("class", "barplot")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -177,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr('height',0);
 
         // construct tooltip
-        var tooltip = d3.select("body").append("div")
+        var tooltip = d3.select(".row").append("div")
           .attr("class", "tooltip")
           .style("opacity", 0);
 
@@ -263,6 +245,28 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
     }
+
+    // URL-source of data
+    d3.select(".row").append("div")
+        .attr("class", "data");
+
+    d3.select(".data").append("sup")
+        .text("Population data")
+        .on("click", function(){
+            window.open("https://data.oecd.org/pop/population.htm");
+    });
+
+    d3.select(".data").append("sup")
+        .text("GDP data")
+        .on("click", function(){
+            window.open("https://data.oecd.org/gdp/gross-domestic-product-gdp.htm");
+    });
+
+    d3.select(".data").append("sup")
+        .text("Quality of Life index data")
+        .on("click", function(){
+            window.open("https://www.numbeo.com/quality-of-life/rankings_by_country.jsp?title=2017-mid&region=150");
+    });
 })
 
 d3.selection.prototype.moveToFront = function() {

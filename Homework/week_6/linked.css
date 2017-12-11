@@ -27,6 +27,10 @@ body {
     float: left;
 }
 
+.data {
+    float: left;
+}
+
 /* markup for the tooltip */
 .tooltip {
     position: absolute;
@@ -38,7 +42,6 @@ body {
     background: lightsteelblue;
     pointer-events: none;
 }
-
 
 sup {
     font: 20px arial;
