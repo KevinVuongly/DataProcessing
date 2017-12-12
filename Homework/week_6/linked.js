@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr("y", 6)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
-            .text("GDP in US dollars/capita");
+            .text("GDP in US dollars/capita in Europe in 2016");
 
         // BARPLOT
         var indexes = ["Quality of Life", "Purchasing power",
@@ -164,10 +164,10 @@ document.addEventListener("DOMContentLoaded", function() {
           .style("opacity", 0);
 
         // draw scatterplot
-        svg.selectAll(".dot")
+        svg.selectAll(".scatters")
             .data(GDP)
             .enter().append("circle")
-            .attr("class", "dot")
+            .attr("class", "scatters")
             .attr("r", function(d) { return d.Total / 100000; })
             .attr("cx", function(d) { return x(d.Population); })
             .attr("cy", function(d) { return y(d.GrossDomesticProduct); })
