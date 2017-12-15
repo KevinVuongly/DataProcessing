@@ -8,13 +8,13 @@ html, body {
 
 body {
     font: 10px sans-serif;
-    margin: 0;
-    display: flex;
+    margin: auto;
+    position: relative;
 
     /* This centers our sketch horizontally. */
     justify-content: center;
 
     /* This centers our sketch vertically. */
     align-items: center;
-    display: inline-block;
+
 }
