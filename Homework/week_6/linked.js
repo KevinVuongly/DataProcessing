@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // bootstrap div's
     d3.select("body")
         .append("div").attr("class", "container-fluid")
-        .append("div").attr("class", "row")
+        .append("div").attr("class", "plots")
 
     // width and height of barchart
     var margin = {top: 50, right: 200, bottom: 30, left: 50},
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var yAxis = d3.svg.axis().scale(y).orient("left");
 
     // add svg element for scatterplot
-    var svg = d3.select(".row").append("div")
+    var svg = d3.select(".plots").append("div")
         .attr("class", "scatterplot")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var yAxisBar = d3.svg.axis().scale(yBar).orient("left");
 
     // add svg element for barplot
-    var barplotsvg = d3.select(".row").append("div")
+    var barplotsvg = d3.select(".plots").append("div")
         .attr("class", "barplot")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // URL-source of data
-    d3.select(".row").append("div")
+    d3.select(".plots").append("div")
         .attr("class", "data");
 
     d3.select(".data").append("sup")
