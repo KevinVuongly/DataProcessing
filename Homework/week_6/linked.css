@@ -35,17 +35,20 @@ body {
     pointer-events: none;
 }
 
+/* markup for data footer */
 sup {
     font: 20px arial;
     display: block;
     width: 260px;
 }
 
+/* markup for data footer when mouse hovering above it */
 sup:hover {
     background-color: blue;
     cursor: pointer;
 }
 
+/* markup for the axis */
 .axis path,
 .axis line {
     fill: none;
@@ -53,6 +56,7 @@ sup:hover {
     shape-rendering: crispEdges;
 }
 
+/* markup for the scatters */
 .scatters {
     stroke: #000;
 }

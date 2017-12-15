@@ -5,6 +5,7 @@
 // wait until DOM content is loaded
 document.addEventListener("DOMContentLoaded", function() {
 
+    // bootstrap div's
     d3.select("body")
         .append("div").attr("class", "container-fluid")
         .append("div").attr("class", "row")
@@ -14,19 +15,15 @@ document.addEventListener("DOMContentLoaded", function() {
         width = 600 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
-    // scale x
+    // scale x and y for scatterplot
     var x = d3.scale.linear().range([0, width]);
-
-    // scale y
     var y = d3.scale.linear().range([height, 0]);
 
-    // add x-axis
+    // add axises for scatterplot
     var xAxis = d3.svg.axis().scale(x).orient("bottom");
-
-    // add y-axis
     var yAxis = d3.svg.axis().scale(y).orient("left");
 
-    // add svg element
+    // add svg element for scatterplot
     var svg = d3.select(".row").append("div")
         .attr("class", "scatterplot")
         .append("svg")
@@ -35,16 +32,18 @@ document.addEventListener("DOMContentLoaded", function() {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    // info for the barplot
     var xBar = d3.scale.ordinal().rangeRoundBands([0, width + 100], .1);
     var yBar = d3.scale.linear().rangeRound([height, 0]);
+
+    // give each bar it's own color
     var zBar = d3.scale.category10();
 
-    // add x-axis
+    // position axises for barplot
     var xAxisBar = d3.svg.axis().scale(xBar).orient("bottom");
-
-    // add y-axis
     var yAxisBar = d3.svg.axis().scale(yBar).orient("left");
 
+    // add svg element for barplot
     var barplotsvg = d3.select(".row").append("div")
         .attr("class", "barplot")
         .append("svg")
@@ -54,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .attr("class", "rectangles")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    // evaluate asynchronous tasks with configurable concurrency
     queue()
     	.defer(d3.csv, "data/GDP.csv")
         .defer(d3.csv, "data/happy.csv")
@@ -148,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .style("font-size", "50px")
             .text("Click on a country");
 
+        // initialize bar values
         barplotsvg.selectAll(".bar")
             .data(indexes)
             .enter().append("rect")
@@ -173,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .attr("cy", function(d) { return y(d.GrossDomesticProduct); })
             .attr("fill", "green")
             .on("mouseover", function(d) {
+                // actions when hovering over a certain scatter
                 d3.select(this).attr("fill", "red");
                 d3.select(this).moveToFront();
                 tooltip.transition()
@@ -186,22 +188,26 @@ document.addEventListener("DOMContentLoaded", function() {
                     .style("top", (d3.event.pageY - 28) + "px");
             })
             .on("mouseout", function() {
+                // reset to old esthetics scatter
                 d3.select(this).attr("fill", "green");
                 tooltip.transition()
                     .duration(500)
                     .style("opacity", 0);
             })
             .on("click", function(d) {
+                // update barplot when clicked on a scatter
                 d3.select(this).attr("fill", "blue");
 
                 var updatesvg = d3.select(".barplot")
 
+                // change title to the country's name
                 updatesvg.transition()
                     .select(".barchartTitle")
                     .text(d.Country);
 
                 var currentCountry = d.Country;
 
+                // update the bars
                 for (var i = 0; i < happy.length; i++){
                     if (happy[i].Country.localeCompare(currentCountry) == 0){
 
