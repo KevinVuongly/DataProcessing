@@ -40,3 +40,10 @@ https://kevinvuongly.github.io/DataProcessing/
 - https://kevinvuongly.github.io/DataProcessing/Homework/week_5/line.html
 - JavaScript with D3, CSS, HTML
 - lineplot.js plots a multiline graph of the minimum, average and maximum temperature of a certain Dutch city in january 2016.
+
+## Info week 6
+- https://kevinvuongly.github.io/DataProcessing/Homework/week_6/linked.html
+- JavaScript with D3, CSS, HTML and bootstrap.
+
+linked.js plots a scatterplot of the GDP in US dollars/capita per country compared to it's population. 
+The barchart gives the Quality of Life indexes of a certain country. This barchart is linked with the scatterplot and gets updated when clocked on a certain scatter value.
