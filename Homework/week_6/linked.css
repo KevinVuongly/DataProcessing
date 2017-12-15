@@ -23,12 +23,6 @@ body {
     float: left;
 }
 
-.plots {
-    width: 1200px ;
-    margin-left: auto ;
-    margin-right: auto ;
-}
-
 /* markup for the tooltip */
 .tooltip {
     position: absolute;
